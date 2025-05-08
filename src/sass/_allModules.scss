@@ -3,18 +3,14 @@
     font-family: "Roboto";
     src: url("../../public/Playfair_Display\,Questrial\,Roboto_Condensed\,Roboto_Mono/Playfair_Display");
 }
+body{
+    height: 10000px;
+}
 
 *{
     padding: 0;
     text-transform: capitalize;
     font-family: "roboto";
-}
-
-svg{
-    width: 13%;
-    @media (max-width:420px) {
-        width: 70%;
-    }
 }
 .about-title{
     color: $second_color;

@@ -1,87 +1,247 @@
-#home{
-    background-image: url(../../../../public/images/hero.png);
+
+.home {
+    height: 100vh;
+    background: url(../../../../public/images/hero.png);
     background-size: cover;
-    height: 1000px;
-    object-fit: cover;
-    z-index: 0;
-    .envelope{
-       
-        display: flex;
-        justify-content: space-around;
-        i{
-            color: #CDA45E;
-            span{
-                color: white;
-            }
-        }
-        span{
-            color: white;
-        }
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home::before {
+    content: "";
+    inset: 0;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.home-content {
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-content .highlight {
+    color: #d9a74a;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid #d9a74a;
+    background-color: #d9a74a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn.outline {
+    background: transparent;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #b78934;
+    border-color: #b78934;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 215, 100, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: rgba(255, 215, 100, 1);
+}
+
+.play-button span {
+    font-size: 2rem;
+    color: #fff;
+}  
+  a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+  }
+  
+  header.navbar {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .modal {    
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 300px;
+    z-index: 1000;
+    text-align: center;
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #d9a74a;
+      border-radius: 5px;
+      font-size: 14px;
+      background-color: #1a1a1a;
+      color: white;
     }
 
-    header{
-        display: flex;
-        justify-content: space-around;
-        background-color: #353231e9;
-        min-height: 60px;
-        padding: 10px 0;
-        align-items: center;
-        h1{
-            color: white;
-            font-weight: bolder;
+    input::placeholder {
+      color: #d9a74a;
+    }
 
-        }
-        nav{
-            display: flex;
-            gap: 1rem;
-            a{
-                text-decoration: none;
-                color: white;
-            }
-            a:hover{
-                color: #CDA45E;
-            }
-        
-        }
-        button{
-            background-color: transparent;
-            border: 2px solid #CDA45E;
-            color: white;
-            text-transform: uppercase;
-            font-size: 14px;
-            padding: 6px 24px;
-            margin: 0 5px 0 30px;
-            border-radius: 50px;
-            transition: 0.3s;
-        }
-        button:hover{
-            background-color: #CDA45E;
-        }
-        .modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #353231e9;
-            margin: auto;
-            width: 600px;
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    input:focus {
+      outline: none;
+      border-color: #b78934;
+    }
 
-            input {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #CDA45E;
-            border-radius: 5px;
-            font-size: 16px;
-            }
-        }
-        }
-}
+    button {
+      padding: 10px 20px;
+      background-color: #d9a74a;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b78934;
+    }
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    padding: 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #d9a74a;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .lang {
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .book-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #d9a74a;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background-color: #d9a74a;
+    color: #000;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 992px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgb(46, 46, 46);
+      padding: 20px 0;
+      a{
+        color: #b78934;
+      }
+      align-items: start;
+    }
+  .nav-links.show {
+    display: flex;
+  }
+  .book-btn {
+    display: none;
+  }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+  }
+  

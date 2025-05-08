@@ -11,39 +11,54 @@
 
 
     <!-- home  -->
-    <section id="home">
-       <div class="envelope"> <div class="en"><i class="bi bi-envelope"><span>example@gmail.com</span></i>
-        <i class="bi bi-phone"><span>+1 5589 55488 55</span></i></div><span>en / de</span></div>
-        <header>
-            <h1>Restaurantly</h1>
-            <nav>
-                <a href="">home</a>
-                <a href="">about</a>
-                <a href="">menu</a>
-                <a href="">specials</a>
-                <a href="">events</a>
-                <a href="">chefs</a>
-                <a href="">gallery</a>
-                <a class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  </a>
-                <a href="">contact</a>
-            </nav>
-            <button id="modal">book a table</button>
-            <div style="display: none;" class="modal"><input type="name" placeholder="enter your name">
-            <input type="number" placeholder="enter your number">
-            <button id="modal2">BOOK NOW</button></div>
-        </header>
+    <section class="home">
+        <header class="navbar">
+            <div class="navbar-container">
+              <div class="logo">Restaurantly</div>
+                  <div class="hamburger" id="hamburger">&#9776;</div>
+                        <nav class="nav-links" id="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Menu</a>
+                <a href="#">Specials</a>
+                <a href="#">Events</a>
+                <a href="#">Chefs</a>
+                <a href="#">Gallery</a>
+                <div class="dropdown">
+                  <a href="#">Dropdown ▾</a>
+                </div>
+                <a href="#">Contact</a>
+              </nav>
+          
+              <div class="navbar-right">
+                
+                <button class="book-btn" id="modal">BOOK A TABLE</button>
+              </div>
+              <div style="display: none;" class="modal"><input type="name" placeholder="enter your name">
+                <input type="number" placeholder="enter your number">
+                <button id="modal2">send</button>
+            </div>
+          </header>
+          
 
-
-
-
-
-
+      
+    <div class="home-content">
+      <h1>Welcome to <span class="highlight">Restaurantly</span></h1>
+      <p>Delivering great food for more than 18 years!</p>
+      <div class="buttons">
+        <button class="btn">OUR MENU</button>
+        <button class="btn outline" id="modal3">BOOK A TABLE</button>
+      </div>
+      <div class="play-button">
+        <span>&#9658;</span>
+      </div>
+    </div>
     </section>
+   
 
     <!-- about -->
-    <section id="about"></section>
 
+      
     <!-- menu -->
     <section id="menu"></section>
 
