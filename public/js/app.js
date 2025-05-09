@@ -169,9 +169,33 @@ document.querySelectorAll('.specials-menu button').forEach((item) => {
  });
 
  
- 
 
 
+//  carousel part  
+let currentSlide = 0;
+let slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+   slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+   });
+}
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+   currentSlide = (currentSlide + 1) % slides.length;
+   showSlide(currentSlide);
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+   showSlide(currentSlide);
+});
+
+
+setInterval(() => {
+   currentSlide = (currentSlide + 1) % slides.length;
+   showSlide(currentSlide);
+}, 3000); 
 
 
 
