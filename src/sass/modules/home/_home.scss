@@ -25,6 +25,11 @@
     padding: 20px;
 }
 
+.header{
+  display: flex;
+  align-items: center;
+}
+
 .home-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;

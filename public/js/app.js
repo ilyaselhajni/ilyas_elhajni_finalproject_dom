@@ -252,12 +252,93 @@ showSlides(currentcaro);
 
 
 // gallery part
+const modal = document.getElementById("carouselModal");
+const modalImg = document.querySelector(".carousel-image");
+const openBtn = document.getElementById("openModalBtn");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const openBtn2 = document.getElementById("openModalBtn2");
+const openBtn3 = document.getElementById("openModalBtn3");
+const openBtn4 = document.getElementById("openModalBtn4");
+const openBtn5 = document.getElementById("openModalBtn5");
+const openBtn6 = document.getElementById("openModalBtn6");
+const openBtn7 = document.getElementById("openModalBtn7");
+const openBtn8 = document.getElementById("openModalBtn8");
 
-let carou = document.querySelector("#carousel2")
-let images = document.querySelectorAll('.gallery')
 
-images.forEach(image => {
-   image.addEventListener('click', () => {
-      carou.style.display = "block"
-   });
-});
+
+
+
+
+// Image URLs
+const images = [
+  "./public/images/tuscan-grilled.jpg",
+  "./public/images/mozzarella.jpg", "./public/images/events-slider-1.jpg",
+];
+
+let currentIndex = 0;
+
+function showImage(index) {
+  modalImg.src = images[index];
+}
+
+
+
+openBtn.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+openBtn2.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+openBtn3.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+openBtn4.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+openBtn5.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+openBtn6.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+openBtn7.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+openBtn8.onclick = function() {
+  modal.style.display = "block";
+  showImage(currentIndex);
+};
+
+
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+};
+
+
+
+nextBtn.onclick = function() {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+};
+
+prevBtn.onclick = function() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+};
+
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
