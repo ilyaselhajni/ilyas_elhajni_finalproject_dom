@@ -249,3 +249,15 @@ setInterval(() => {
 
 
 showSlides(currentcaro);
+
+
+// gallery part
+
+let carou = document.querySelector("#carousel2")
+let images = document.querySelectorAll('.gallery')
+
+images.forEach(image => {
+   image.addEventListener('click', () => {
+      carou.style.display = "block"
+   });
+});
