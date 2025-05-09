@@ -30,12 +30,12 @@ body {
         cursor: pointer;
     }
     .tab:active{
-        border-bottom: 2px solid #d4a64f;
-        color: #d4a64f;
+        border-bottom: 2px solid #d4a64f !important;
+        color: #d4a64f !important;
     }
     .tab:hover{
-        border-bottom: 2px solid #d4a64f;
-        color: #d4a64f;
+        border-bottom: 2px solid #d4a64f !important;
+        color: #d4a64f !important;
     }
 }
 

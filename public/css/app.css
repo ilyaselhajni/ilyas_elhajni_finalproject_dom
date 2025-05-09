@@ -30048,7 +30048,7 @@ textarea.form-control-lg {
   padding: 20px;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
 }
@@ -30871,12 +30871,12 @@ body {
   cursor: pointer;
 }
 .tabs .tab:active {
-  border-bottom: 2px solid #d4a64f;
-  color: #d4a64f;
+  border-bottom: 2px solid #d4a64f !important;
+  color: #d4a64f !important;
 }
 .tabs .tab:hover {
-  border-bottom: 2px solid #d4a64f;
-  color: #d4a64f;
+  border-bottom: 2px solid #d4a64f !important;
+  color: #d4a64f !important;
 }
 
 .menu-items {
@@ -31236,9 +31236,9 @@ textarea {
   margin: 0 auto;
 }
 
-button {
+.table-book {
   padding: 15px 30px;
-  margin-top: 20px;
+  margin-top: 40px;
   background-color: transparent;
   border: 2px solid #f1c27d;
   color: #f1c27d;
@@ -31248,7 +31248,7 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+.table-book:hover {
   background-color: #f1c27d;
   color: #000;
 }

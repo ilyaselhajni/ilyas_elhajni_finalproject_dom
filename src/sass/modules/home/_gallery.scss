@@ -141,22 +141,22 @@ textarea {
   }
 }
 
-button {
-  padding: 15px 30px;
-  margin-top: 20px;
-  background-color: transparent;
-  border: 2px solid #f1c27d;
-  color: #f1c27d;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+ .table-book {
+   padding: 15px 30px;
+   margin-top: 40px;
+   background-color: transparent;
+   border: 2px solid #f1c27d;
+   color: #f1c27d;
+   border-radius: 30px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: all 0.3s ease;
+ }
 
-button:hover {
-  background-color: #f1c27d;
-  color: #000;
-}
+ .table-book:hover {
+   background-color: #f1c27d;
+   color: #000;
+ }
 
 
     @media (max-width: 420px) {
