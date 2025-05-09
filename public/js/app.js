@@ -199,3 +199,17 @@ setInterval(() => {
 
 
 
+
+
+const topBtn = document.querySelector('.top-btn');
+
+window.onscroll = function () {
+    topBtn.classList.toggle('visible', window.scrollY > 300);
+};
+
+topBtn.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};

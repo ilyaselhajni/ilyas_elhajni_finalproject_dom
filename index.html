@@ -34,8 +34,8 @@
                 
                 <button class="book-btn" id="modal">BOOK A TABLE</button>
               </div>
-              <div style="display: none;" class="modal"><input type="name" placeholder="enter your name">
-                <input type="number" placeholder="enter your number">
+              <div style="display: none;" class="modal"><input type="name" placeholder="enter your name" required>
+                <input type="number" placeholder="enter your number" required>
                 <button id="modal2">send</button>
             </div>
           </header>
@@ -290,11 +290,32 @@
           </ul>
         </div>
       </div>
-    </div>
-    
+      
       <button id="prevBtn" class="prev d-none">⟨</button>
       <button id="nextBtn" class="prev d-none">⟩</button>
     </div>
+     <section class="reservation">
+    <h4>RESERVATION</h4>
+    <h1>Book a Table</h1>
+    <form id="reservation-form">
+      <div class="row">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Your Phone" required />
+        <input type="date" required />
+        <input type="time" required />
+        <input type="number" placeholder="# of people" min="1" required />
+      </div>
+      <div class="textarea">
+        <textarea placeholder="Message" rows="4"></textarea>
+      <button type="submit">Book a Table</button>
+      </div>
+    </form>
+   
+  </section>
+
+    
+
     
     
 
@@ -318,11 +339,17 @@
     
 
 
+    <div style="height: 2000px;"></div>
+
+    <button class="top-btn" aria-label="Back to top">
+       ↑
+    </button>
+
+
 
 
     <script src="./public/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>  
-  
 
 </body>
 </html> 
